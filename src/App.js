@@ -1,27 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    let Elm = <h1>Hello world</h1>;
+    let Feel = <h1>I FEEL IT</h1>;
+    let Belm = <h1>REEEEE</h1>;
+    let Relm = <img src={this.props.url} height="200px" width="200px"></img>
+
+    //tests theType property passed in by creating object, then uses that to decide what type of App to return
+    switch(this.props.theType){
+      case "Elm":
+        return(
+          <div>
+            <h3>{this.props.theType.toString()}</h3>
+            {Elm}
+            {new Date().toLocaleString()}
+          </div>
+        );
+      case "Feelit":
+        return (
+          <div>
+            {Elm}
+            {Relm}
+            {Elm}
+
+          </div>
+        );
+      default:
+        return (
+          <div>
+            {Belm}
+            {Relm}
+            {Feel}
+            {Belm}
+          </div>
+        );
+      }
   }
 }
 
