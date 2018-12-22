@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
+import Time from './Time';
 import './App.css';
 
 class App extends Component {
   render() {
-    let Elm = <h1>Hello world</h1>;
+    return this.selectType();
+  }
+
+  selectType(){
+
+    let Elm = <h1 style={{color:'green', border: '3px solid black', backgroundColor: 'black', textAlgin: 'center'}}>Hello world</h1>;
     let Feel = <h1>I FEEL IT</h1>;
     let Belm = <h1>REEEEE</h1>;
-    let Relm = <img src={this.props.url} height="200px" width="200px"></img>
+    let Relm = <img src={this.props.url} height="200px" width="200px" alt="hello world"></img>
 
     //tests theType property passed in by creating object, then uses that to decide what type of App to return
     switch(this.props.theType){
@@ -15,7 +21,7 @@ class App extends Component {
           <div>
             <h3>{this.props.theType.toString()}</h3>
             {Elm}
-            {new Date().toLocaleString()}
+            <Time />
           </div>
         );
       case "Feelit":

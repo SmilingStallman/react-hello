@@ -10,9 +10,60 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <main>
-      <div id="left-content"></div>
-      <div id="content"></div>
-      <div id="right-content"></div>
+      <div id="trading">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container" id="chart">
+          <div id="tradingview_e4e31"></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL chart</span></a> by TradingView</div>
+          <script src="https://s3.tradingview.com/tv.js"></script>
+          <script>
+          new TradingView.widget(
+          {
+          "height": "100%",
+          "width": "100%",
+          "symbol": "NASDAQ:AAPL",
+          "interval": "M",
+          "timezone": "Etc/UTC",
+          "theme": "Dark",
+          "style": "2",
+          "locale": "en",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "allow_symbol_change": true,
+          "container_id": "tradingview_e4e31"
+          }
+          );
+          </script>
+        </div>
+        <!-- TradingView Widget END -->
+        <div id="pic-array"></div>
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container" id="chartB">
+          <div id="tradingview_1aff7"></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-FB/" rel="noopener" target="_blank"><span class="blue-text">FB chart</span></a> by TradingView</div>
+          <script src="https://s3.tradingview.com/tv.js"></script>
+          <script>
+          new TradingView.widget(
+          {
+          "height": "100%",
+          "width": "100%",
+          "symbol": "NASDAQ:FB",
+          "interval": "M",
+          "timezone": "Etc/UTC",
+          "theme": "Dark",
+          "style": "2",
+          "locale": "en",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "allow_symbol_change": true,
+          "container_id": "tradingview_1aff7"
+        }
+          );
+          </script>
+        </div>
+        <!-- TradingView Widget END -->
+      </div>
+      <div id="helloDiv"></div>
     </main>
   </body>
 </html>

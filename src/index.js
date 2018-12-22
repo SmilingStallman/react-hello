@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import AppGroup from './AppGroup';
-import * as serviceWorker from './serviceWorker';
+import PicArray from './PicArray';
+//import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<AppGroup />, document.getElementById('content'));
-ReactDOM.render(<AppGroup />, document.getElementById('right-content'));
-ReactDOM.render(<AppGroup />, document.getElementById('left-content'));
+//HelloWorld
+ReactDOM.render(
+  <div style={{display: "flex",
+              alignItems: "center",
+              justifyContent: "space-around"}}>
+    <AppGroup/>
+    <AppGroup/>
+    <AppGroup/>
+  </div>, document.getElementById('helloDiv'));
 
-console.log(React.DOM);
+//Trading
+ReactDOM.render(<PicArray/>, document.getElementById('pic-array'));
+
 //serviceWorker.unregister();
