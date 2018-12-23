@@ -32,7 +32,7 @@ class PicArray extends Component {
 
   //updates image every second
   switchImage(){
-        setInterval(()=> this.nextImage(), 1000);
+        setInterval(()=> this.nextImage(), 3000);
   }
 
   //Time component with time value that updates every second is rendered
