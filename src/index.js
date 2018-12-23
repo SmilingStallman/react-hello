@@ -20,8 +20,6 @@ function HelloWorld(){
     return <div style={{display: "flex", alignItems: "center", justifyContent: "space-around"}}>
       <AppGroup/><AppGroup/><AppGroup/></div>;
 }
-
-
 ReactDOM.render(HelloWorld(), document.getElementById('helloDiv'));
 
 //Trading

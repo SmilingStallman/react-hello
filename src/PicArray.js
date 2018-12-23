@@ -16,32 +16,29 @@ class PicArray extends Component {
                         '/images/stocks/9.jpg',
                         '/images/stocks/10.png'
                         ],
-                   currentUrl: '',
                    currentIndex: 0,
                    alt: "wojack"
                   };
     this.switchImage();   //starts time when class created
   }
 
-  //incriments this.CurrentIndex by +1 until == length of array, then resets to 0
-  //also updates currentUrl for image each iteration
+  //incriments this.CurrentIndex by +1 until going to breach array range, then resets to 0
   nextImage(){
-    if(this.state.currentIndex >= this.state.urlList.length)
+    if(this.state.currentIndex >= this.state.urlList.length-1)
       this.setState({currentIndex: 0});
-
-    this.setState({currentUrl: this.state.urlList[this.state.currentIndex]});
-    this.setState({currentIndex: this.state.currentIndex+1});
+    else
+      this.setState({currentIndex: this.state.currentIndex+1});
   }
 
   //updates image every second
   switchImage(){
-        setInterval(()=> this.nextImage(), 3000);
+        setInterval(()=> this.nextImage(), 1000);
   }
 
   //Time component with time value that updates every second is rendered
   render() {
         let pic = <div style={{margin: "auto"}}>
-                  <img src={this.state.currentUrl} alt="wojack"
+                  <img src={this.state.urlList[this.state.currentIndex]} alt="wojack"
                     style={{width:"100%", height: "100%"}}>
                   </img>
                 </div>;
