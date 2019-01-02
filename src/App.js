@@ -10,8 +10,8 @@ class App extends Component {
   selectType(){
 
     let Elm = <h1 style={{color:'green', border: '3px solid black', backgroundColor: 'black', textAlgin: 'center'}}>Hello world</h1>;
-    let Feel = <h1>The ships hung in the sky, much the way that bricks don't.</h1>;
-    let Belm = <h1>Those who believe in telekinetics, raise my hand.</h1>;
+    let Feel = <h1>Let go</h1>;
+    let Belm = <h1>Be kind</h1>;
     let Relm = <img src={this.props.url} height="200px" width="200px" alt="hello world"></img>
 
     //tests theType property passed in by creating object, then uses that to decide what type of App to return
