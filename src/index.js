@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import AppGroup from './AppGroup';
-import PicArray from './PicArray';
+import AppGroup from './AppGroup';;
 //import * as serviceWorker from './serviceWorker';
 
 
