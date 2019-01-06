@@ -23,6 +23,5 @@ function HelloWorld(){
 ReactDOM.render(HelloWorld(), document.getElementById('helloDiv'));
 
 //Trading
-ReactDOM.render(<PicArray/>, document.getElementById('pic-array'));
 
 //serviceWorker.unregister();
