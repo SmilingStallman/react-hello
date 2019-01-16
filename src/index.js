@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import times from 'lodash/times';
 import './index.css';
 import AppGroup from './AppGroup';;
 //import * as serviceWorker from './serviceWorker';
@@ -8,24 +9,14 @@ const styles = {display: "flex",
                alignItems: "center",
                justifyContent: "space-around"};
 
-//set HelloWorld with 1, 2, or 3 <AppGroup/> components based on viewport size
-function HelloWorld(){
-  if(document.documentElement.clientWidth <= 400)
-    return <div style={styles}>
-            <AppGroup/>
-           </div>;
+const maxNum = document.body.clientWidth / 200;
 
-  else if(document.documentElement.clientWidth <= 615)
-    return <div style={styles}>
-            <AppGroup/><AppGroup/>
-          </div>;
+const group = () => maxNum > 6 ? times(6, () => <AppGroup/>) : times(maxNum, () => <AppGroup/>);
 
-  else
-    return <div style={styles}>
-            <AppGroup/><AppGroup/><AppGroup/>
-           </div>;
-}
-ReactDOM.render(HelloWorld(), document.getElementById('helloDiv'));
+ReactDOM.render(<div style={styles}>
+                  {group()}
+                </div>
+        , document.getElementById('helloDiv'));
 
 //Trading
 
