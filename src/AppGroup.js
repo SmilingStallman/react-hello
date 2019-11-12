@@ -7,9 +7,9 @@ class AppGroup extends Component {
     return(
       <div>
         <App theType='Elm'/>
-        <App theType='Belm' url='/images/lainlines.gif'/>
+        <App theType='Belm' url='images/lainlines.gif'/>
         <App theType='Elm'/>
-        <App theType='Feelit'url='/images/grid-glitch-a.gif'/>
+        <App theType='Feelit'url='images/grid-glitch-a.gif'/>
       </div>
     );
   }
