@@ -5,16 +5,16 @@ class PicArray extends Component {
   //Constructor creates time value and starts update method
   constructor(props){
     super(props);
-    this.state = {urlList: ['/images/stocks/1.jpg',
-                        '/images/stocks/2.png',
-                        '/images/stocks/3.jpg',
-                        '/images/stocks/4.jpg',
-                        '/images/stocks/5.png',
-                        '/images/stocks/6.jpg',
-                        '/images/stocks/7.jpg',
-                        '/images/stocks/8.png',
-                        '/images/stocks/9.jpg',
-                        '/images/stocks/10.png'
+    this.state = {urlList: ['images/stocks/1.jpg',
+                        'images/stocks/2.png',
+                        'images/stocks/3.jpg',
+                        'images/stocks/4.jpg',
+                        'images/stocks/5.png',
+                        'images/stocks/6.jpg',
+                        'images/stocks/7.jpg',
+                        'images/stocks/8.png',
+                        'images/stocks/9.jpg',
+                        'images/stocks/10.png'
                         ],
                    currentIndex: 0,
                    alt: "wojack"
