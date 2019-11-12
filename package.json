@@ -1,5 +1,6 @@
 {
   "name": "hello-world-react",
+  "homepage": "http://www.kylemiskell.com/react-hello",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
